@@ -26,3 +26,5 @@ define('IMAGE_PATH','http://shop/resources/images/');
 // create objects
 include('app/models/m_template.php');
 $template= new Template();
+
+session_start();

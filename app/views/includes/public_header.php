@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="resources/css/style.css" media="all" rel="stylesheet" type="text/css">
-    <title>Online Store</title>
+    <title><?php $this->get_data('page_title'); ?></title>
 </head>
 <body class="">
     <div id="wraper">
