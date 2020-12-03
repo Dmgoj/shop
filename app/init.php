@@ -26,11 +26,12 @@ define('IMAGE_PATH','http://shop/resources/images/');
 // include objects
 include('app/models/m_template.php');
 include('app/models/m_categories.php');
+include('app/models/m_products.php');
 
 // create objects
 
 $template= new Template();
 $categories= new Categories();
-
+$products=new Products();
 
 session_start();

@@ -16,8 +16,7 @@
         <h1><?php echo SITE_NAME; ?></h1>
 
         <ul class="nav">
-            <li class="active"><a href="#">All Items</a></li>
-            <li ><a href="#">Category 1</a></li>
+            <?php $this->get_data('page_nav'); ?>
         </ul>
     
 

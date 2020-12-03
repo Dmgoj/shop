@@ -66,6 +66,47 @@ class Categories
         return $data;
     }
 
+    /*
+        Create page parts
+    */
+
+    /**
+     * Returns an unordered list of links to all category pages
+     * 
+     * @access public
+     * @param string (optional)
+     * @return string
+     */
+
+    public function create_category_nav($active = NULL)
+    {
+        // get all categories
+        $categories=$this->get_categories();
+
+        // set up 'all' item
+        $data='<li';
+        if($active == strtolower('home'))
+        {
+            $data .= ' class="active"';
+        }
+        $data .= '><a href="' . SITE_PATH . '">View All</a></li>';
+
+        // loop through each category
+        if (! empty($categories))
+        {
+            foreach($categories as $category)
+            {
+                $data .= '<li';
+                if(strtolower($active) == strtolower($category['name']))
+                {
+                    $data .= ' class="active"';
+                }
+                $data .= '><a href="' . SITE_PATH . 'index.php?=' . $category['id'] . '">' . $category['name'] . '</a></li>';
+            }
+        }
+        return $data;
+    }
+
 }
 
 ?>
