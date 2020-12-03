@@ -23,8 +23,14 @@ define('SITE_NAME', 'Online Store');
 define('SITE_PATH','http://shop/');
 define('IMAGE_PATH','http://shop/resources/images/');
 
-// create objects
+// include objects
 include('app/models/m_template.php');
+include('app/models/m_categories.php');
+
+// create objects
+
 $template= new Template();
+$categories= new Categories();
+
 
 session_start();

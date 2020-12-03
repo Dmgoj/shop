@@ -2,9 +2,12 @@
 
 include('app/init.php');
 
-$template->set_data('header','hello');
-$template->set_alert('alert!');
-$template->load('app/views/v_public_home.php', 'Welcome!');
+echo "<pre>";
+print_r($categories->get_categories());
+echo "</pre>";
 
+/*$template->set_data('header','hello');
+$template->set_alert('alert!');
+$template->load('app/views/v_public_home.php', 'Welcome!');*/
  ?>
 
